@@ -18,7 +18,7 @@ import { CartPageComponent } from './cart-page/cart-page.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

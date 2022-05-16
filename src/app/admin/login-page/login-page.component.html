@@ -1,0 +1,12 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <h2>Login as administrator</h2>
+
+  <div class="form-control">
+    <label for="email">Email</label>
+    <input type="email" id="email" formControlName="email">
+    <div *ngIf="form.get('email')?.touched && form.get('email')?.invalid" class="validation">
+      <small *ngIf="form.get('email')?.errors.required">Enter Email</small>
+      <small>Enter Valid Email</small>
+    </div>
+  </div>
+</form>
