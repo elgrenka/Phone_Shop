@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { of } from 'rxjs';
 import { AuthService } from 'src/app/shared/auth.service';
 
 @Component({
@@ -50,14 +49,17 @@ export class LoginPageComponent implements OnInit {
     // })
     
     this.auth.login(user).subscribe({
-      next: () => {
-        this.form.reset;
+      next: (res) => {
+        console.log(res);
+        this.form.reset();
         this.router.navigate(['/admin', 'dashboard']);
         this.submitted = false;
       },
-      error: () => {
+      error: (e) => {
+        console.log(e)
         this.submitted = false;
-      }
+      },
+      complete: () => console.log('log in complete')
   })
 
   }
