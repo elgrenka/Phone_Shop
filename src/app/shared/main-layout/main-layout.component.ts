@@ -9,7 +9,7 @@ import { ProductService } from '../product.service';
 })
 export class MainLayoutComponent implements OnInit {
 
-  type = 'Laptop';
+  type = 'Phone';
 
   constructor(
     private router: Router,
@@ -21,7 +21,6 @@ export class MainLayoutComponent implements OnInit {
 
   setType(type: any) {
     this.type = type;
-    console.log(this.type);
 
     if (this.type !== 'Cart') {
       this.router.navigate(['/'], {
@@ -30,9 +29,9 @@ export class MainLayoutComponent implements OnInit {
         }
       })
 
-      
+      this.productServ.setType(this.type)
+
     }
-    this.productServ.setType(this.type);
   }
 
 }

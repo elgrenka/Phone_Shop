@@ -2,17 +2,17 @@
   <h2>Online Shop</h2>
 
   <ul>
-    <li routerLinkActive="active">
+    <li [ngClass]="{'active': this.type === 'Phone'}">
       <a (click)="setType('Phone')">Phone</a>
     </li>
-    <li routerLinkActive="active">
+    <li [ngClass]="{'active': this.type === 'Tablet'}">
       <a (click)="setType('Tablet')">Tablet</a>
     </li>
-    <li routerLinkActive="active">
+    <li [ngClass]="{'active': this.type === 'Laptop'}" >
       <a (click)="setType('Laptop')">Laptop</a>
     </li>
-    <li routerLinkActive="active">
-      <a (click)="setType('Cart')" [routerLink]='["/cart"]'>Cart</a>
+    <li routerLinkActive="active" id="f">
+      <a (click)="setType('Cart')" [routerLink]="['/cart']">Cart</a>
     </li>
   </ul>
 </nav>

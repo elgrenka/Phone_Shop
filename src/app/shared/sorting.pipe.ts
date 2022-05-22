@@ -8,7 +8,7 @@ export class SortingPipe implements PipeTransform {
 
   transform(products: Product[], type = ''): any {
     return products.filter(product => {
-      return product.type = type;
+      return product.type == type;
     })
   }
 
