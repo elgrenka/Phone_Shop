@@ -59,7 +59,7 @@ export class LoginPageComponent implements OnInit {
         console.log(e)
         this.submitted = false;
       },
-      complete: () => console.log('log in complete')
+      complete: () => console.log('log in is complete')
   })
 
   }

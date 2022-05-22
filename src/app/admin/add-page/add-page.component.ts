@@ -53,10 +53,10 @@ export class AddPageComponent implements OnInit {
         this.submitted = false;
       },
       error: (e) => { 
-      console.log(e)
-      this.submitted = false;
+        console.log(e)
+        this.submitted = false;
       },
-      complete: () => console.log('add product complete')
+      complete: () => console.log('add product is complete')
     });
     
   }

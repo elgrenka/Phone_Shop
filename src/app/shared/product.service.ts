@@ -9,6 +9,8 @@ import { FbResponse, Product } from './interfaces';
 })
 export class ProductService {
 
+  type = 'Phone';
+
   constructor(private http: HttpClient) { }
 
   create(product: any) {
@@ -43,8 +45,18 @@ export class ProductService {
         date: new Date(res.date)
       }
     }))
-      
-    
+  }
+
+  remove(id: any) {
+    return this. http.delete(`${environment.fbDbUrl}/products/${id}.json`)
+  }
+
+  update(product: Product) {
+    return this.http.patch(`${environment.fbDbUrl}/products/${product.id}.json`, product)
+  }
+
+  setType(type: any) {
+    this.type = type;
   }
 
 }

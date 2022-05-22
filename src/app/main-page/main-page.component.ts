@@ -13,7 +13,7 @@ export class MainPageComponent implements OnInit {
   products$!: Observable<Product[]>;
 
   constructor(
-    private productServ: ProductService
+    public productServ: ProductService
   ) { }
 
   ngOnInit(): void {
