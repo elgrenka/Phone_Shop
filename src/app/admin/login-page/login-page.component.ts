@@ -49,9 +49,9 @@ export class LoginPageComponent implements OnInit {
     // })
     
     this.auth.login(user).subscribe({
-      next: (res) => {
-        console.log(res);
+      next: () => {
         this.form.reset();
+        // this.router.navigate(['/admin', 'dashboard']);
         this.router.navigate(['/admin', 'dashboard']);
         this.submitted = false;
       },
