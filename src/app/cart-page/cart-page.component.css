@@ -1,0 +1,12 @@
+@import '../admin/login-page/login-page.component.css';
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 8vw;
+}
+
+.container {
+  min-width: 900px;
+}
+
